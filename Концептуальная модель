@@ -1,0 +1,10 @@
+@startuml
+class student
+
+student - server : want beer >
+server - camera : where robot <
+server - robot : move >
+student - robot : place glass >
+beerStation - robot : give beer >
+student - robot : give beer <
+@enduml
