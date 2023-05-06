@@ -5,8 +5,6 @@
 class Robot
 {
 private:
-	TCPEntity* cmdrcv;
-	GPIOEntity* gpio_entity;
 	Motor* motorA;
 	Motor* motorB;
 	
@@ -14,7 +12,7 @@ private:
 	
 	
 public:
-	Robot(TCPEntity* te, GPIOEntity* ge, Motor* ma, Motor* mb);
+	Robot(Motor* ma, Motor* mb);
 	
 	int run();
 	
@@ -24,7 +22,7 @@ public:
 	void turn_right(const double& val);
 };
 
-Robot::Robot(TCPEntity* te, GPIOEntity* ge, Motor* ma, Motor* mb) : cmdrcv(te), gpio_entity(ge), motorA(ma), motorB(mb)
+Robot::Robot(Motor* ma, Motor* mb) : cmdrcv(te), motorA(ma), motorB(mb)
 {
 	print("Подключено");
 }
