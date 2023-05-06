@@ -1,4 +1,3 @@
-#pragma once
 #include <string.h>
 #include "../rapidjson/include/rapidjson/document.h"
 
